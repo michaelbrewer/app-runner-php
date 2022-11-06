@@ -3,7 +3,7 @@ runtime: php81
 build:
   commands:
     build:
-      – echo no build command for this PHP project
+      - echo no build command for this PHP project
 run:
   command: php -S 0.0.0.0:3000 -t .
   network:
