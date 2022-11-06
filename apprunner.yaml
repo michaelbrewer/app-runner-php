@@ -2,9 +2,10 @@ version: 1.0
 runtime: php81
 build:
   commands:
-    build:
-      - find .
-      - rm -Rf infra readme.md
+    pre-build:
       - mv service/* .
+      - rm -Rf infra readme.md
+    build:
+      - echo No build step
 run:
   command: php -S 0.0.0.0:8080 -t .
