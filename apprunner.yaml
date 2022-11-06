@@ -3,6 +3,7 @@ runtime: php81
 build:
   commands:
     build:
+      - find .
       - rm -Rf infra readme.md
       - mv service/* .
 run:

@@ -9,8 +9,7 @@ class AppRunnerStack(Stack):
 
         apprunner.Service(
             self,
-            "Service",
-            service_name="app-runner-demo",
+            "AppRunnerDemo",
             source=apprunner.Source.from_git_hub(
                 repository_url="https://github.com/michaelbrewer/app-runner-php",
                 branch="main",
