@@ -3,6 +3,7 @@ runtime: php81
 build:
   commands:
     build:
-      - echo no build command for this PHP project
+      - rm -Rf infra readme.md
+      - mv service/* .
 run:
   command: php -S 0.0.0.0:8080 -t .
