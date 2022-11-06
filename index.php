@@ -5,7 +5,7 @@
     </head>
     <body>
     <?php
-        print("Hello World!");
+        print("Basic App Runner example using the PHP 8.1 managed runtime");
         print("<br>");
     ?>
     </body>
