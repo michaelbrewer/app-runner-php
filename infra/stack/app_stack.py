@@ -1,3 +1,4 @@
+import os
 from constructs import Construct
 from aws_cdk import Stack
 import aws_cdk.aws_apprunner_alpha as apprunner
@@ -14,8 +15,6 @@ class AppRunnerStack(Stack):
                 repository_url="https://github.com/michaelbrewer/app-runner-php",
                 branch="main",
                 configuration_source=apprunner.ConfigurationSourceType.REPOSITORY,
-                connection=apprunner.GitHubConnection.from_connection_arn(
-                    "arn:aws:apprunner:us-east-2:254688924456:connection/personal/19f5f17f173846a88abd163c3bdf6fa1"
-                ),
+                connection=apprunner.GitHubConnection.from_connection_arn(os.environ["GITHUB_ARN"]),
             ),
         )
